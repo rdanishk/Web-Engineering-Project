@@ -1,0 +1,186 @@
+
+<!-- saved from url=(0039)http://localhost/ubaid/main/index.html# -->
+<html class="win chrome chrome50 webkit webkit5"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Wynn Las Vegas &amp; Encore Resort</title>
+		<link rel="stylesheet" type="text/css" href="./Wynn Las Vegas &amp; Encore Resort_files/combined_329DA857C5F0736C21F34E3B4643D2F1.css">
+		<script type="text/javascript" src="./Wynn Las Vegas &amp; Encore Resort_files/jquery-2.1.3.min.js"></script><style type="text/css"></style>
+		<script type="text/javascript" src="./Wynn Las Vegas &amp; Encore Resort_files/Login.js">
+        function availability(){
+            alert('ggwp');
+        }
+        </script>
+	</head>
+
+	<body id="body">
+		<form method="post" action="http://localhost/ubaid/main/index.html" id="form1">
+			<div id="c1" class="container container-header">
+
+				<header class="wlv-home-header">
+					<div class="wlv-logo">
+						<a id="top_0_header_0_LnkLogo" href="http://localhost/ubaid/main/index.html">
+							<img src="./Wynn Las Vegas &amp; Encore Resort_files/mainlogo.png" id="top_0_header_0_ImgLogo" width="152" height="68">
+						</a>
+					</div>
+					<div class="wlv-top-nav-container" style="display: none;">
+						<ul class="wlv-top-nav">
+							<li class="menu-item active ss" runat="server" id="liMenu">
+								<a id="top_0_header_1_RptNavigation_LnkItem_0" class="menu-item" href="http://localhost/ubaid/main/index.html">HOME</a>
+							</li>
+							<li class="menu-item ss" runat="server" id="liMenu">
+								<a id="top_0_header_1_RptNavigation_LnkItem_1" class="menu-item" href="http://localhost/ubaid/main/RoomsSuites.html">ROOMS &amp; SUITES</a>
+							</li>
+
+							<li class="menu-item ss" runat="server" id="liMenu">
+								<a id="top_0_header_1_RptNavigation_LnkItem_2" class="menu-item" href="http://localhost/ubaid/main/Dining.html">DINING</a>
+							</li>
+							<li class="menu-item ss" runat="server" id="liMenu">
+								<a id="top_0_header_1_RptNavigation_LnkItem_3" class="menu-item" href="http://localhost/ubaid/main/Nightlife.html">NIGHTLIFE</a>
+							</li>
+
+							<li class="menu-item ss" runat="server" id="liMenu">
+								<a id="top_0_header_1_RptNavigation_LnkItem_4" class="menu-item" href="http://localhost/ubaid/main/MeetingsAndWeddings.html">MEETINGS &amp; WEDDINGS</a>
+							</li>
+						</ul>
+					</div>
+<!--working here-->
+					<div class="wlv-widgets">
+						<div class="wlv-widget-tabs">
+							<div class="wlv-widget-xpandobtn select hidden-xs" id="wlv-widget-xpandobtn">
+								<a class="widgetSubmitButton" href="http://localhost/ubaid/main/index.html#" onclick="availability()">
+                                    <span class="wlv-widget-tab-main">CHECK</span>
+									<span class="wlv-widget-tab-auxtext">AVAILABILITY</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="wlv-widget-content">
+							<div id="wlv-room-reservation-form" class="wlv-widget-form" style="display: block;">
+
+								<div class="form-row" id="tabletDropArrive">
+									<label id="arriveLabel">ARRIVE</label>
+									<input name="top_0$header_2$tbSarCheckIn" type="text" id="tbSarCheckIn" class="form-control text-calendar hasDatepicker" readonly="" style="cursor: default;">
+								</div>
+
+								<div class="form-row" id="tabletDropDepart">
+									<label id="departLabel">DEPART</label>
+									<input name="top_0$header_2$tbSarCheckOut" type="text" id="tbSarCheckOut" class="form-control text-calendar hasDatepicker" readonly="" style="cursor: default;" data-trigger="manual" data-toggle="popover" data-placement="bottom">
+								</div>
+
+								<div class="widget-form-secondrow">
+									<div class="form-row" id="tabletDropRooms">
+										<label id="roomsLabel">ROOMS</label>
+										<select id="ddSarRoomCount" name="rooms" class="form-control select-sm">
+											<option selected="selected" value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div class="form-row" id="tabletDropAdults">
+										<label id="adultsLabel">ADULTS</label>
+										<select id="ddSarAdultCount" name="ddSarAdultCount" class="form-control select-sm" data-trigger="manual" data-toggle="popover" data-placement="bottom">
+											<option selected="selected" value="1">1 per room</option>
+											<option value="2">2 per room</option>
+											<option value="3">3 per room</option>
+											<option value="4">4 per room</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<script src="./Wynn Las Vegas &amp; Encore Resort_files/moment.min.js"></script>
+					<script type="text/javascript">
+						var desktop = window.matchMedia('(min-width: 768px)');
+
+						var CURRDATE = new Date('3/11/2016');
+						var dateFormat = "MM/DD/YYYY";
+						var dt = moment(CURRDATE).clone();
+						var MAXCALENDARDATE = dt.clone().add('days', 400).format(dateFormat);
+						var NUMBER_OF_MAX_STAY_DAYS = 14;
+						var DEFAULT_ADD_DAYS_TO_ARRIVAL = 7;
+						var DEFAULT_NUMBER_OF_NIGHTS = 3;
+						var MIN_SELECTABLE_DATE = CURRDATE;
+						var MAX_SELECTABLE_DATE = MAXCALENDARDATE;
+						var START_DATE = dt;
+						var END_DATE = moment(START_DATE).clone().add('days', DEFAULT_NUMBER_OF_NIGHTS);
+						var DEFAULT_START_DATE = moment(START_DATE).clone().add('days', DEFAULT_ADD_DAYS_TO_ARRIVAL);
+						var DEFAULT_END_DATE = moment(END_DATE).clone().add('days', DEFAULT_ADD_DAYS_TO_ARRIVAL);
+
+
+						$('#wlv-room-reservation-form').show();
+						$('#wlv-dining-reservation-form').hide();
+						$('#wlv-dining-entertainment-form').hide();
+					</script>
+				</header>
+			</div>
+
+			<div id="c2" class="container">
+				<div class="row wlv-home-main">
+					<div class="col-md-12">
+						<div class="home-main-img">
+							<div>
+								<img src="./Wynn Las Vegas &amp; Encore Resort_files/homepage.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="c3" class="container">
+				<footer class="row wlv-home-footer">
+					<div class="col-md-12">
+						<div class="wlv-footer-container">
+							<div class="hidden-xs">
+								<ul class="wlv-footer-nav">
+								
+									<li class="menu-item">
+										<a href="http://localhost/ubaid/main/login.php">LOGIN</a>
+									</li>
+									
+									<li>|</li>
+									
+									<li class="menu-item">
+										<a href="http://localhost/ubaid/main/WynnMagazine.html">MAGAZINE</a>
+									</li>
+	
+									<li>|</li>
+	
+									<li class="menu-item">
+										<a href="http://localhost/ubaid/main/AboutUs.html">ABOUT US</a>
+									</li>
+	
+									<li>|</li>
+	
+									<li class="menu-item">
+										<a href="http://localhost/ubaid/main/PrivacyPolicy.html">PRIVACY POLICY</a>
+									</li>
+								
+								</ul>
+							</div>
+
+							<div class="social hidden-xs">
+								<a href="http://www.twitter.com/" target="_blank">
+									<img alt="" src="./Wynn Las Vegas &amp; Encore Resort_files/social-twitter.png" style="border-width: 0px; border-style: solid;">
+								</a>
+							&nbsp;
+								<a href="https://www.facebook.com/" target="_blank">
+									<img alt="" src="./Wynn Las Vegas &amp; Encore Resort_files/social-facebook.png" style="border-width: 0px; border-style: solid;">
+								</a>
+							&nbsp;
+								<a href="http://www.instagram.com/" target="_blank">
+									<img alt="" src="./Wynn Las Vegas &amp; Encore Resort_files/social-instagram.png" style="border-width: 0px; border-style: solid;">
+								</a>
+								<br>
+							</div>
+							<div class="footer-copyright">
+								<p>© 2016 Wynn Resort Holdings, LLC. All rights reserved.</p>
+							</div>
+						</div>
+					</div>
+				</footer>			
+			</div>
+		</form>
+		<script type="text/javascript" src="./Wynn Las Vegas &amp; Encore Resort_files/audio.js"></script>        
+	
+<div class="wynn-date-picker"><div class="wynn-date-picker"><div class="wynn-date-picker"><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></div></div></div></body></html>
